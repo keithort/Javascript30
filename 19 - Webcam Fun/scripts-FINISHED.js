@@ -62,7 +62,7 @@ function redEffect(pixels) {
 }
 
 function rgbSplit(pixels) {
-  for(let i = 0; i < pixels.data.length; i+=4) {
+  for(let i = 0; i < pixels.data.length; i += 4) {
     pixels.data[i - 150] = pixels.data[i + 0]; // RED
     pixels.data[i + 500] = pixels.data[i + 1]; // GREEN
     pixels.data[i - 550] = pixels.data[i + 2]; // Blue
@@ -77,7 +77,7 @@ function greenScreen(pixels) {
     levels[input.name] = input.value;
   });
 
-  for (i = 0; i < pixels.data.length; i = i + 4) {
+  for (let i = 0; i < pixels.data.length; i += 4) {
     red = pixels.data[i + 0];
     green = pixels.data[i + 1];
     blue = pixels.data[i + 2];
